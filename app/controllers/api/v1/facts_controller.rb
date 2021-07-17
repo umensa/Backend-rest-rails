@@ -32,7 +32,7 @@ class Api::V1::FactsController < ApplicationController
     # code here
     if @fact.update(fact_params)
       render json: @fact,
-      status: 201
+      status: 200
     else
       render json: { error: "Unable to update, #{@fact.errors.full_messages.to_sentence}"},
       status: 400
